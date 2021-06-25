@@ -16,10 +16,13 @@ public class WebRTCController : MonoBehaviour
     public RTCConfiguration config = default;
 
     private PeerVideo peerVideo;
+    private VideoReceiver videoReceiver;
             
     void Start()
     {
         peerVideo = new PeerVideo(GameObject.Find("SelfCam").GetComponent<RawImage>());
+        receiveStream = new MediaStream();
+        videoReceiver = GetComponent<VideoReceiver>();
     }
 
     private void Awake() {
@@ -35,23 +38,68 @@ public class WebRTCController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.P))
             SendMsg("Test");
 
-        if(Input.GetKeyDown(KeyCode.V))
+        if(Input.GetKeyDown(KeyCode.V)){
             if(peerVideo.IsStreaming())
                 peerVideo.StopWebCam();
-            else
+            else{
                 peerVideo.StartWebCam();
-        
-
-
+                // peerVideo.AddTrack(remoteConnection);
+                peerVideo.AddTrack(localConnection);
+                // StartCoroutine(WebRTC.Update());
+            }
+        }
     }
+
+
 
     private void SetUpWebRTC(){
         CreateLocalPeer();
+        localConnection.OnTrack = (RTCTrackEvent e) => {
+            if (e.Track.Kind == TrackKind.Video)
+            {
+                // Debug.Log("local connection received track");
+                // var videoTrack = (VideoStreamTrack) e.Track;
+                // var receiveRender = videoTrack.InitializeReceiver(1280, 720);
+                // videoReceiver.StreamVideo(receiveRender);
+            }
+        };
+        localConnection.OnNegotiationNeeded = () => { 
+            Debug.Log("local re-negotiate");
+            StartCoroutine(StartSignalling());
+        };
+
+
         CreateRemotePeer();
+
+        remoteConnection.OnTrack = (RTCTrackEvent e) => {
+            if (e.Track.Kind == TrackKind.Video)
+            {
+                Debug.Log("remote connection received track");
+                receiveStream.AddTrack(e.Track);
+                // var videoTrack = (VideoStreamTrack) e.Track;
+                // Debug.Log(videoTrack.texture);
+                // var receiveRender = videoTrack.InitializeReceiver(1280, 720);
+                // Debug.Log(receiveRender.name);
+                // videoReceiver.StreamVideo(receiveRender);
+            }
+        };
+
+        receiveStream.OnAddTrack = e =>  {
+            if (e.Track is VideoStreamTrack track)
+            {
+                Texture temp = track.InitializeReceiver(1280, 720);
+                Debug.Log("received stream texture is null: " + ( temp == null));
+                videoReceiver.StreamVideo(temp);
+            }
+        };
+
         RegCommunicationPaths();
         CheckICEConnection();
         CreateSendChannel();
-        StartCoroutine(StartSignalling());
+        peerVideo.AddTrack(localConnection);
+
+        StartCoroutine(WebRTC.Update());
+        
     }
     private void CreateLocalPeer(){
         localConnection = new RTCPeerConnection(ref config);
@@ -252,6 +300,7 @@ public class WebRTCController : MonoBehaviour
                 break;
         }
     }
+
 
 
     private void OnDestroy()

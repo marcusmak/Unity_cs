@@ -1,3 +1,5 @@
 *.blend
 *.obj
 **/Temp
+**/Library
+**/Logs

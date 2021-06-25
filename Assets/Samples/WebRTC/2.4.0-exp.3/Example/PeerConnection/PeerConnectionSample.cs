@@ -68,6 +68,7 @@ class PeerConnectionSample : MonoBehaviour
         pc2Ontrack = e =>
         {
             receiveStream.AddTrack(e.Track);
+            // Debug.Log("pc2ontrack :" + e.Track.)
         };
         pc1OnNegotiationNeeded = () => { StartCoroutine(PeerNegotiationNeeded(_pc1)); };
 
@@ -75,6 +76,7 @@ class PeerConnectionSample : MonoBehaviour
         {
             if (e.Track is VideoStreamTrack track)
             {
+                Debug.Log("received stream texture: " + (track.InitializeReceiver(width, height) == null));
                 receiveImage.texture = track.InitializeReceiver(width, height);
                 receiveImage.color = Color.white;
             }
@@ -94,7 +96,7 @@ class PeerConnectionSample : MonoBehaviour
             wct = new WebCamTexture(webCam.name);
             wct.Play();
             videoStreamTrack = new VideoStreamTrack("video",wct);
-
+    
 
 
         }
@@ -199,26 +201,6 @@ class PeerConnectionSample : MonoBehaviour
         updateText.text = remoteCandidateStats.Id;
     }
 
-    IEnumerator PeerNegotiationNeeded(RTCPeerConnection pc)
-    {
-        var op = pc.CreateOffer();
-        yield return op;
-
-        if (!op.IsError)
-        {
-            if (pc.SignalingState != RTCSignalingState.Stable)
-            {
-                Debug.LogError($"{GetName(pc)} signaling state is not stable.");
-                yield break;
-            }
-
-            yield return StartCoroutine(OnCreateOfferSuccess(pc, op.Desc));
-        }
-        else
-        {
-            OnCreateSessionDescriptionError(op.Error);
-        }
-    }
 
     private void AddTracks()
     {
@@ -292,6 +274,27 @@ class PeerConnectionSample : MonoBehaviour
     private RTCPeerConnection GetOtherPc(RTCPeerConnection pc)
     {
         return (pc == _pc1) ? _pc2 : _pc1;
+    }
+    IEnumerator PeerNegotiationNeeded(RTCPeerConnection pc)
+    {
+        var op = pc.CreateOffer();
+        yield return op;
+        Debug.Log("PeerNegotiationNeeded ");
+
+        if (!op.IsError)
+        {
+            if (pc.SignalingState != RTCSignalingState.Stable)
+            {
+                Debug.LogError($"{GetName(pc)} signaling state is not stable.");
+                yield break;
+            }
+
+            yield return StartCoroutine(OnCreateOfferSuccess(pc, op.Desc));
+        }
+        else
+        {
+            OnCreateSessionDescriptionError(op.Error);
+        }
     }
 
     private IEnumerator OnCreateOfferSuccess(RTCPeerConnection pc, RTCSessionDescription desc)

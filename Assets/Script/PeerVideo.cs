@@ -61,5 +61,19 @@ namespace Local.WebRTC{
             return this.isStreaming;
         }
 
+        public void AddTrack(Unity.WebRTC.RTCPeerConnection conn){
+            if(isStreaming && _videoStreamTrack != null){
+                Debug.Log("Add track to remote: " + _videoStreamTrack.Id );
+                var sender = conn.AddTrack(_videoStreamTrack);
+                // var parameters = sender.GetParameters();
+                // foreach (var encoding in parameters.encodings)
+                // {
+                //     // encoding.maxBitrate = bitrate;
+                // }
+                // sender.SetParameters(parameters);
+                // // conn.GetSenders
+            }
+        }
+        
     }
 }

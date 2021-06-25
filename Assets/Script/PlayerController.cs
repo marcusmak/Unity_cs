@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     // UnityEngine.Video.VideoPlayer videoPlayer;
     GameObject videoPlayer;
-    VideoReceiver videoReceiver;
+    // VideoReceiver videoReceiver;
 
 
     // Start is called before the first frame update
@@ -18,9 +18,8 @@ public class PlayerController : MonoBehaviour
     {
         _rigidBody = GetComponent<Rigidbody>();  
         animator = GetComponentInChildren<Animator>();
-        videoReceiver = GetComponent<VideoReceiver>();
-        videoPlayer = GameObject.Find("Video");
-        videoPlayer.SetActive(false);
+        // videoReceiver = GetComponent<VideoReceiver>();
+
     }
 
     // Update is called once per frame
@@ -58,13 +57,13 @@ public class PlayerController : MonoBehaviour
             transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime * rotationSpeed, Space.World);
         }
         
-        if (Input.GetKey(KeyCode.X)){
-            videoPlayer.SetActive(!videoPlayer.activeSelf);
-            if(videoPlayer.activeSelf){
-                videoReceiver.StartSelfCam(videoPlayer.GetComponent<MeshRenderer>());
-            }else{
-                videoReceiver.StopSelfCam();
-            }
-        }
+        // if (Input.GetKey(KeyCode.X)){
+        //     videoPlayer.SetActive(!videoPlayer.activeSelf);
+        //     if(videoPlayer.activeSelf){
+        //         videoReceiver.StartSelfCam(videoPlayer.GetComponent<MeshRenderer>());
+        //     }else{
+        //         videoReceiver.StopSelfCam();
+        //     }
+        // }
     }
 }
