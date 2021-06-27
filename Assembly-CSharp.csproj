@@ -36,11 +36,35 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\Player.cs" />
      <Compile Include="Assets\Script\WebRTCController.cs" />
      <Compile Include="Assets\Script\WebRTCSettings.cs" />
      <Compile Include="Assets\Script\VideoReceiver.cs" />
+     <Compile Include="Assets\Script\HttpClient.cs" />
      <Compile Include="Assets\Script\PlayerController.cs" />
      <Compile Include="Assets\Script\PeerVideo.cs" />
+     <None Include="Assets\Packages\System.Buffers.4.5.1\version.txt" />
+     <None Include="Assets\Packages\System.Buffers.4.5.1\lib\netstandard2.0\System.Buffers.xml" />
+     <None Include="Assets\Packages\System.Buffers.4.5.1\useSharedDesignerContext.txt" />
+     <None Include="Assets\Packages\System.Threading.Tasks.Extensions.4.5.4\lib\netstandard2.0\System.Threading.Tasks.Extensions.xml" />
+     <None Include="Assets\Packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\useSharedDesignerContext.txt" />
+     <None Include="Assets\Packages\System.Text.Encodings.Web.5.0.1\useSharedDesignerContext.txt" />
+     <None Include="Assets\Packages\System.Text.Json.5.0.2\version.txt" />
+     <None Include="Assets\Packages\System.Runtime.CompilerServices.Unsafe.5.0.0\useSharedDesignerContext.txt" />
+     <None Include="Assets\Packages\System.Threading.Tasks.Extensions.4.5.4\useSharedDesignerContext.txt" />
+     <None Include="Assets\Packages\System.Text.Json.5.0.2\useSharedDesignerContext.txt" />
+     <None Include="Assets\Packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.xml" />
+     <None Include="Assets\Packages\System.Text.Json.5.0.2\lib\netstandard2.0\System.Text.Json.xml" />
+     <None Include="Assets\Packages\System.Memory.4.5.4\version.txt" />
+     <None Include="Assets\Packages\SocketIOClient.2.2.4\lib\netstandard2.0\SocketIOClient.xml" />
+     <None Include="Assets\Packages\System.Text.Encodings.Web.5.0.1\version.txt" />
+     <None Include="Assets\Packages\System.Runtime.CompilerServices.Unsafe.5.0.0\version.txt" />
+     <None Include="Assets\Packages\System.Memory.4.5.4\lib\netstandard2.0\System.Memory.xml" />
+     <None Include="Assets\Packages\System.Threading.Tasks.Extensions.4.5.4\version.txt" />
+     <None Include="Assets\Packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\version.txt" />
+     <None Include="Assets\Packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.xml" />
+     <None Include="Assets\Packages\System.Text.Encodings.Web.5.0.1\lib\netstandard2.0\System.Text.Encodings.Web.xml" />
+     <None Include="Assets\Packages\System.Memory.4.5.4\useSharedDesignerContext.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -272,11 +296,35 @@
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
+    <Reference Include="System.Text.Encodings.Web">
+        <HintPath>D:/Project/Unity_cs/Assets/Packages/System.Text.Encodings.Web.5.0.1/lib/netstandard2.0/System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+        <HintPath>D:/Project/Unity_cs/Assets/Packages/System.Buffers.4.5.1/lib/netstandard2.0/System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces">
+        <HintPath>D:/Project/Unity_cs/Assets/Packages/Microsoft.Bcl.AsyncInterfaces.5.0.0/lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+        <HintPath>D:/Project/Unity_cs/Assets/Packages/System.Memory.4.5.4/lib/netstandard2.0/System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="SocketIOClient">
+        <HintPath>D:/Project/Unity_cs/Assets/Packages/SocketIOClient.2.2.4/lib/netstandard2.0/SocketIOClient.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
         <HintPath>D:/Project/Unity_cs/Library/PackageCache/com.unity.visualscripting@1.6.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="System.Text.Json">
+        <HintPath>D:/Project/Unity_cs/Assets/Packages/System.Text.Json.5.0.2/lib/netstandard2.0/System.Text.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
         <HintPath>D:/Project/Unity_cs/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+        <HintPath>D:/Project/Unity_cs/Assets/Packages/System.Threading.Tasks.Extensions.4.5.4/lib/netstandard2.0/System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+        <HintPath>D:/Project/Unity_cs/Assets/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

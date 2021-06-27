@@ -297,11 +297,20 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="System.Text.Encodings.Web">
+        <HintPath>D:/Project/Unity_cs/Assets/Packages/System.Text.Encodings.Web.5.0.1/lib/netstandard2.0/System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+        <HintPath>D:/Project/Unity_cs/Assets/Packages/System.Buffers.4.5.1/lib/netstandard2.0/System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
         <HintPath>D:/Project/Unity_cs/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
         <HintPath>D:/Project/Unity_cs/Library/PackageCache/com.unity.visualscripting@1.6.1/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces">
+        <HintPath>D:/Project/Unity_cs/Assets/Packages/Microsoft.Bcl.AsyncInterfaces.5.0.0/lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.IonicZip">
         <HintPath>D:/Project/Unity_cs/Library/PackageCache/com.unity.visualscripting@1.6.1/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
@@ -309,11 +318,29 @@
     <Reference Include="log4netPlastic">
         <HintPath>D:/Project/Unity_cs/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
     </Reference>
+    <Reference Include="System.Memory">
+        <HintPath>D:/Project/Unity_cs/Assets/Packages/System.Memory.4.5.4/lib/netstandard2.0/System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="SocketIOClient">
+        <HintPath>D:/Project/Unity_cs/Assets/Packages/SocketIOClient.2.2.4/lib/netstandard2.0/SocketIOClient.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
         <HintPath>D:/Project/Unity_cs/Library/PackageCache/com.unity.visualscripting@1.6.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="System.Text.Json">
+        <HintPath>D:/Project/Unity_cs/Assets/Packages/System.Text.Json.5.0.2/lib/netstandard2.0/System.Text.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
         <HintPath>D:/Project/Unity_cs/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+        <HintPath>D:/Project/Unity_cs/Assets/Packages/System.Threading.Tasks.Extensions.4.5.4/lib/netstandard2.0/System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="NugetForUnity">
+        <HintPath>D:/Project/Unity_cs/Assets/NuGet/Editor/NugetForUnity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+        <HintPath>D:/Project/Unity_cs/Assets/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="unityplastic">
         <HintPath>D:/Project/Unity_cs/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>

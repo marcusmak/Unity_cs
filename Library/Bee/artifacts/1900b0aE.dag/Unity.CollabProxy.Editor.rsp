@@ -108,6 +108,15 @@
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/NuGet/Editor/NugetForUnity.dll"
+-r:"Assets/Packages/Microsoft.Bcl.AsyncInterfaces.5.0.0/lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll"
+-r:"Assets/Packages/SocketIOClient.2.2.4/lib/netstandard2.0/SocketIOClient.dll"
+-r:"Assets/Packages/System.Buffers.4.5.1/lib/netstandard2.0/System.Buffers.dll"
+-r:"Assets/Packages/System.Memory.4.5.4/lib/netstandard2.0/System.Memory.dll"
+-r:"Assets/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll"
+-r:"Assets/Packages/System.Text.Encodings.Web.5.0.1/lib/netstandard2.0/System.Text.Encodings.Web.dll"
+-r:"Assets/Packages/System.Text.Json.5.0.2/lib/netstandard2.0/System.Text.Json.dll"
+-r:"Assets/Packages/System.Threading.Tasks.Extensions.4.5.4/lib/netstandard2.0/System.Threading.Tasks.Extensions.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
