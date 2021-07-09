@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: b1740dc7f9f75034a8c1e0e2a9fec79a, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -216,7 +216,7 @@ RectTransform:
   m_Children:
   - {fileID: 1069777664}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1106,8 +1106,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1846926089}
-        m_TargetAssemblyTypeName: HttpClient, Assembly-CSharp
+      - m_Target: {fileID: 1944290428}
+        m_TargetAssemblyTypeName: ViewController, Assembly-CSharp
         m_MethodName: SubmitName
         m_Mode: 2
         m_Arguments:
@@ -1169,7 +1169,7 @@ GameObject:
   - component: {fileID: 1600910234}
   - component: {fileID: 1600910233}
   m_Layer: 5
-  m_Name: Sign-in
+  m_Name: signinUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1251,7 +1251,7 @@ RectTransform:
   - {fileID: 1855789745}
   - {fileID: 1399355606}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1337,49 +1337,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768990181}
   m_CullTransparentMesh: 1
---- !u!1 &1846926088
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1846926090}
-  - component: {fileID: 1846926089}
-  m_Layer: 0
-  m_Name: HttpClient
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1846926089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846926088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6a7ecefb6a9a48449aa1ed73bf84288, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1846926090
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846926088}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 421.3556, y: 247.53067, z: 3.0413566}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1855789741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,7 +1496,7 @@ GameObject:
   - component: {fileID: 1927433571}
   - component: {fileID: 1927433570}
   m_Layer: 5
-  m_Name: Room
+  m_Name: roomUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1621,7 +1578,7 @@ RectTransform:
   - {fileID: 1175337112}
   - {fileID: 2051268891}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1718,6 +1675,7 @@ GameObject:
   - component: {fileID: 1944290427}
   - component: {fileID: 1944290426}
   - component: {fileID: 1944290425}
+  - component: {fileID: 1944290428}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1771,8 +1729,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1944290428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944290424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db196517271e3b4382174dee1c33e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2051268890
 GameObject:
   m_ObjectHideFlags: 0
@@ -1856,8 +1826,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1846926089}
-        m_TargetAssemblyTypeName: HttpClient, Assembly-CSharp
+      - m_Target: {fileID: 1944290428}
+        m_TargetAssemblyTypeName: ViewController, Assembly-CSharp
         m_MethodName: Connect
         m_Mode: 2
         m_Arguments:

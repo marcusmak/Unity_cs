@@ -36,13 +36,17 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script\Player.cs" />
-     <Compile Include="Assets\Script\WebRTCController.cs" />
-     <Compile Include="Assets\Script\WebRTCSettings.cs" />
-     <Compile Include="Assets\Script\VideoReceiver.cs" />
-     <Compile Include="Assets\Script\HttpClient.cs" />
-     <Compile Include="Assets\Script\PlayerController.cs" />
-     <Compile Include="Assets\Script\PeerVideo.cs" />
+     <Compile Include="Assets\Scripts\WebRTC\WebRTCController.cs" />
+     <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\WebRTC\WebRTCSettings.cs" />
+     <Compile Include="Assets\Scripts\WebRTC\VideoReceiver.cs" />
+     <Compile Include="Assets\Scripts\GameCanvas\OtherPlayerController.cs" />
+     <Compile Include="Assets\Scripts\GameCanvas\PlayersHandler.cs" />
+     <Compile Include="Assets\Scripts\WebRTC\PeerVideo.cs" />
+     <Compile Include="Assets\Scripts\GameCanvas\MainPlayerController.cs" />
+     <Compile Include="Assets\Scripts\Login\ViewController.cs" />
+     <Compile Include="Assets\Scripts\HttpClient.cs" />
+     <Compile Include="Assets\Scripts\Util\RayCaster.cs" />
      <None Include="Assets\Packages\System.Buffers.4.5.1\version.txt" />
      <None Include="Assets\Packages\System.Buffers.4.5.1\lib\netstandard2.0\System.Buffers.xml" />
      <None Include="Assets\Packages\System.Buffers.4.5.1\useSharedDesignerContext.txt" />
